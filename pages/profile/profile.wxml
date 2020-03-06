@@ -1,0 +1,22 @@
+<!--pages/profile/profile.wxml-->
+<navbar></navbar>
+<view class="container-profile">
+<view class="userinfo">
+  <block>
+    <image class="userinfo-avatar" src="../../icons/coach.png" mode="cover"></image>
+    <text class="userinfo-nickname"></text>
+  </block>
+  <button id="login-btn">
+      登录
+  </button>
+</view>
+<!-- <view class="line"></view> -->
+<view class="fun-btns">
+  <view class="t9">意见反馈</view>
+  <view class="fun-item center"></view>
+  <view class="fun-item">
+    <image id="next" src="../../icons/next.png"></image>
+  </view>
+</view>
+<view class="line"></view>
+</view>

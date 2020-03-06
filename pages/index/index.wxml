@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<navbar></navbar>
+<view class="container">
+  <view class="hint">教练点评页</view>
+
+</view>

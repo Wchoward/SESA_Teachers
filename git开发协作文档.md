@@ -108,7 +108,7 @@ git flow feature start check develop
 
 3. push到远程自己的feature分支（如`origin/feature/check`）（管理人员会经常检查，以便进行进度监控与管理）
 
-4. push之前进行一次pull develop分支操作！保持自己push上去的feature分支是基于最新的develop分支版本的！！！
+4. 注意微信群的通知，如果收到版本更新的通知，要进行develop分支的更新并把它合并到自己的feature分支。
 
    ```bash
    git checkout develop
@@ -146,15 +146,15 @@ git flow feature finish <name>
 
 3. App中远端仓库选择克隆
 
-   <img src="./克隆仓库.png" style="zoom:25%;" />
+   <img src="ss/克隆仓库.png" style="zoom:25%;" />
 
 4. 克隆到本地后，打开本地仓库
 
-   <img src="./打开本地仓库.png" alt="image-20200310124550373" style="zoom:25%;" />
+   <img src="ss/打开本地仓库.png" alt="image-20200310124550373" style="zoom:25%;" />
 
 5. 仓库 -> git-flow 或 hg flow -> **初始化仓库**
 
-   <img src="./初始化GitFlow.png" alt="image-20200310124714028" style="zoom:25%;" />
+   <img src="ss/初始化GitFlow.png" alt="image-20200310124714028" style="zoom:25%;" />
 
 6. 初始化仓库后 = git flow init完毕，接着点击 `建立新的功能`，输入自己的功能分支名称即可。
 

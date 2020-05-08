@@ -116,3 +116,12 @@ page{
 button::after {
   border: none;
 }
+
+#pick{
+  display: flex;
+  flex-direction: row;
+}
+picker{
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+}

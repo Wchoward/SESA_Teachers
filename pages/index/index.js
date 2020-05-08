@@ -4,32 +4,32 @@ const app = getApp()
 
 Page({
     data: {
-        currTab:0,
-        undone_lst: [{
-          usr_name: '李小绿',
-          create_time: '2020-05-07 20:21:25',
-          usr_avatar: '../../icons/lixiaolv.png',
-          task_lst: [{
-            time: 20,
-            content: '背单词'
-          }, {
-            time: 40,
-            content: '绘本阅读'
-          }],
-          self_comment: '孩子今天读绘本了，好棒！',
+      currTab:0,
+      undone_lst: [{
+        usr_name: '李小绿',
+        create_time: '2020-05-07 20:21:25',
+        usr_avatar: '../../icons/lixiaolv.png',
+        task_lst: [{
+          time: 20,
+          content: '背单词'
         }, {
-          usr_name: '邬小浩',
-          create_time: '2020-05-07 19:15:50',
-          usr_avatar: '../../icons/wuxiaohao.png',
-          task_lst: [{
-            time: 15,
-            content: '背单词'
-          }, {
-            time: 10,
-            content: '听音频'
-          }],
-          self_comment: '孩子觉得内容太难，学得少！',
+          time: 40,
+          content: '绘本阅读'
         }],
+        self_comment: '孩子今天读绘本了，好棒！',
+      }, {
+        usr_name: '邬小浩',
+        create_time: '2020-05-07 19:15:50',
+        usr_avatar: '../../icons/wuxiaohao.png',
+        task_lst: [{
+          time: 15,
+          content: '背单词'
+        }, {
+          time: 10,
+          content: '听音频'
+        }],
+        self_comment: '孩子觉得内容太难，学得少！',
+      }],
       done_lst: [{
         usr_name: '李小绿',
         create_time: '2020-05-06 18:21:25',
@@ -57,6 +57,37 @@ Page({
         self_comment: '今天边看电影边跟读，很棒呢！',
         instruction: '表现不错，继续加油！',
       }],
+      multiArray: [['1期训练营', '2期训练营', '3期训练营'], ['5-10岁组', '11-15岁组', '15-20岁组']],
+      objectMultiArray: [
+        [
+          {
+            id: 0,
+            name: '1期训练营'
+          },
+          {
+            id: 1,
+            name: '2期训练营'
+          },
+          {
+            id: 2,
+            name: '3期训练营'
+          }
+        ], [
+          {
+            id: 0,
+            name: '5-10岁组'
+          },
+          {
+            id: 1,
+            name: '11-15岁组'
+          },
+          {
+            id: 2,
+            name: '16-20岁组'
+          }
+        ]
+      ],
+      multiIndex: [0, 0]
     },
     //事件处理函数
     bindViewTap: function() {

@@ -4,6 +4,13 @@
       <button class = "tab-btn {{currTab === 0 ? 'active':''}}" id="undone"  bindtap="activeTab">未 评</button>
       <button class = "tab-btn {{currTab === 1 ? 'active':''}}" id="done" bindtap="activeTab">已 评</button>
     </view>
+    <view id="pick">
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+    </view>
     <block wx:if= "{{currTab === 0}}">
     <view class="info_block" wx:for="{{undone_lst}}" wx:for-item="i">
     

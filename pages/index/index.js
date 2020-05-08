@@ -29,7 +29,19 @@ Page({
           content: '听音频'
         }],
         self_comment: '孩子觉得内容太难，学得少！',
-      }],
+        }, {
+          usr_name: '邬小浩',
+          create_time: '2020-05-07 19:15:50',
+          usr_avatar: '../../icons/wuxiaohao.png',
+          task_lst: [{
+            time: 15,
+            content: '背单词'
+          }, {
+            time: 10,
+            content: '听音频'
+          }],
+          self_comment: '孩子觉得内容太难，学得少！',
+        }],
       done_lst: [{
         usr_name: '李小绿',
         create_time: '2020-05-06 18:21:25',
@@ -144,5 +156,33 @@ Page({
             }) 
           console.log(2)
         }
+    },
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      multiIndex: e.detail.value
+    })
+  },
+  bindMultiPickerColumnChange: function (e) {
+    console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
+    var data = {
+      multiArray: this.data.multiArray,
+      multiIndex: this.data.multiIndex
+    };
+    data.multiIndex[e.detail.column] = e.detail.value;
+    switch (e.detail.column) {
+      case 0:
+        switch (data.multiIndex[0]) {
+          case 0:
+            data.multiArray[1] = ['5-10岁组', '11-15岁组', '16-20岁组'];
+            break;
+          case 1:
+            data.multiArray[1] = ['5-10岁组', '11-15岁组', '16-20岁组'];
+            break;
+        }
+        data.multiIndex[1] = 0;
+        break;
     }
+    this.setData(data);
+  }
 })

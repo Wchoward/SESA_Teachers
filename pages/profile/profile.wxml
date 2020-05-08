@@ -6,7 +6,7 @@
     <image class="userinfo-avatar" src="../../icons/coach.png" mode="cover"></image>
     <text class="userinfo-nickname"></text>
   </block>
-  <button id="login-btn">
+  <button id="login-btn" bindtap="login">
       登录
   </button>
 </view>

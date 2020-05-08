@@ -58,7 +58,7 @@
             </view>
             <view class="c-text" id="t-text">
                 <text class="title">教练点评</text>
-                <text class="comments">{{i.self_comment}}</text>
+                <text class="comments">{{i.instruction}}</text>
             </view>
             <button class="comment">评  价</button>
           </view>

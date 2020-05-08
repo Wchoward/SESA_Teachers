@@ -1,6 +1,67 @@
 <!--index.wxml-->
-<navbar></navbar>
 <view class="container">
-  <view class="hint">教练点评页</view>
+    <view class="nav-tab">
+      <button class = "tab-btn {{currTab === 0 ? 'active':''}}" id="undone"  bindtap="activeTab">未 评</button>
+      <button class = "tab-btn {{currTab === 1 ? 'active':''}}" id="done" bindtap="activeTab">已 评</button>
+    </view>
+    <block wx:if= "{{currTab === 0}}">
+    <view class="info_block" wx:for="{{undone_lst}}" wx:for-item="i">
+    
+    <view class="usr_info">
+      <view class='info1'>
+        <view class="avatar">
+          <image class="userinfo-avatar" src="{{i.usr_avatar}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{i.usr_name}}</text>
+        </view>
+        <view class="create_time">
+          <text>{{i.create_time}}</text>
+        </view>
+      </view>
+      <view class="detail">
+        <image class="item-icon" src="../../icons/right.png" mode="cover"></image>
+      </view>
+    </view>
+    <view class="item" wx:for="{{i.task_lst}}" wx:for-item="j">
+      <image class="item-icon" src="../../icons/finish.png" mode="cover"></image>
+      <text class="item-text">完成了{{j.time}}分钟的{{j.content}}</text>
+    </view>
+    <view class="c-text" id="t-text">
+      <text class="title" >家长自评</text>
+      <text class="comments">{{i.self_comment}}</text>
+    </view>
+    <button class="comment">点  评</button>
+  </view>
+  </block>
+  <block wx:else>
+        <view class="info_block" wx:for="{{done_lst}}" wx:for-item="i">
+            <view class="usr_info">
+                <view class='info1'>
+                    <view class="avatar">
+                        <image class="userinfo-avatar" src="{{i.usr_avatar}}" mode="cover"></image>
+                        <text class="userinfo-nickname">{{i.usr_name}}</text>
+                    </view>
+                    <view class="create_time">
+                        <text>{{i.create_time}}</text>
+                    </view>
+                </view>
+                <view class="detail">
+                    <image class="item-icon" src="../../icons/right.png" mode="cover"></image>
+                </view>
+            </view>
+            <view class="item" wx:for="{{i.task_lst}}" wx:for-item="j">
+                <image class="item-icon" src="../../icons/finish.png" mode="cover"></image>
+                <text class="item-text">完成了{{j.time}}分钟的{{j.content}}</text>
+            </view>
+            <view class="c-text" >
+                <text class="title">家长自评</text>
+                <text class="comments">{{i.self_comment}}</text>
+            </view>
+            <view class="c-text" id="t-text">
+                <text class="title">教练点评</text>
+                <text class="comments">{{i.self_comment}}</text>
+            </view>
+            <button class="comment">评  价</button>
+          </view>
+  </block>
 
 </view>

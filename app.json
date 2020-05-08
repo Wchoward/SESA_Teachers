@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/profile/profile",
-    "pages/login/index"
+    "pages/login/index",
+    "pages/comment/index",
+    "pages/review/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

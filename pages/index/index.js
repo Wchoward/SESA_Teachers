@@ -30,17 +30,17 @@ Page({
         }],
         self_comment: '孩子觉得内容太难，学得少！',
         }, {
-          usr_name: '邬小浩',
-          create_time: '2020-05-07 19:15:50',
-          usr_avatar: '../../icons/wuxiaohao.png',
+          usr_name: '张小红',
+          create_time: '2020-05-07 21:15:50',
+          usr_avatar: '../../icons/zhangxiaohong.png',
           task_lst: [{
-            time: 15,
+            time: 30,
             content: '背单词'
           }, {
-            time: 10,
+            time: 40,
             content: '听音频'
           }],
-          self_comment: '孩子觉得内容太难，学得少！',
+          self_comment: '孩子今天学的很多！',
         }],
       done_lst: [{
         usr_name: '李小绿',
@@ -184,5 +184,15 @@ Page({
         break;
     }
     this.setData(data);
+  },
+  go_comment: function () {
+    wx.navigateTo({
+      url: '../comment/index'
+    })
+  },
+  go_review: function () {
+    wx.navigateTo({
+      url: '../review/index'
+    })
   }
 })
